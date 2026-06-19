@@ -1,0 +1,280 @@
+/* ===================================
+   CSS RESET
+=================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===================================
+   CSS VARIABLES
+=================================== */
+
+:root {
+  --primary-color: #0096c7;
+  --secondary-color: #00b4d8;
+  --background-color: #f8fafc;
+  --white: #ffffff;
+  --dark: #1f2937;
+  --gray: #6b7280;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--background-color);
+  color: var(--dark);
+}
+/* ===================================
+   NAVBAR (FIXED + VISIBLE)
+=================================== */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  z-index: 1000;
+
+  /* IMPORTANT FIX → makes navbar visible */
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 120px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #1f2937;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  color: #0096c7;
+}
+
+/* ===================================
+   HERO
+=================================== */
+
+.contact-hero {
+  text-align: center;
+  padding: 80px 10%;
+  margin-top: 100px;
+}
+
+.contact-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-hero span {
+  color: var(--primary-color);
+}
+
+.contact-hero p {
+  max-width: 700px;
+  margin: auto;
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+/* ===================================
+   CONTACT SECTION
+=================================== */
+
+.contact-section {
+  padding: 60px 10% 100px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+}
+
+.contact-info h2,
+.contact-form-wrapper h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.contact-description {
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.contact-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.contact-card i {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.contact-card h3 {
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  color: var(--gray);
+}
+
+/* ===================================
+   FORM
+=================================== */
+
+.contact-form-wrapper {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 150, 199, 0.2);
+}
+
+.submit-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+.footer {
+  background: #111827;
+  color: white;
+  padding: 60px 10% 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footlinks h4 {
+  margin-bottom: 20px;
+}
+
+.footlinks ul {
+  list-style: none;
+}
+
+.footlinks ul li {
+  margin-bottom: 10px;
+}
+
+.footlinks a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footlinks a:hover {
+  color: white;
+}
+
+.social {
+  display: flex;
+  gap: 15px;
+}
+
+.social a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+}

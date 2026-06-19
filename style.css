@@ -1,0 +1,256 @@
+/* ===================================
+   RESET
+=================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* ===================================
+   GLOBAL
+=================================== */
+body {
+  background: #fff;
+  color: #333;
+}
+
+/* ===================================
+   HERO SECTION
+=================================== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* ===================================
+   NAVBAR (FIXED + VISIBLE)
+=================================== */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  z-index: 1000;
+
+  /* IMPORTANT FIX → makes navbar visible */
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 120px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: #1f2937;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #0096c7;
+}
+
+/* ===================================
+   HERO TEXT
+=================================== */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 55px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin: 15px 0;
+  opacity: 0.9;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #0096c7;
+  color: white;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #00b4d8;
+}
+
+/* ===================================
+   ABOUT SECTION
+=================================== */
+.about-section {
+  padding: 80px 10%;
+}
+
+.about-container {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.btn-dark {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #1f2937;
+  color: white;
+  border-radius: 5px;
+}
+
+/* ===================================
+   DESTINATIONS
+=================================== */
+.destinations-section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.destinations-section h2 {
+  margin-bottom: 40px;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.dest-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.dest-card h3 {
+  margin-top: 10px;
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+.footer {
+  background: #111827;
+  color: white;
+  padding: 60px 10%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-box h3,
+.footer-box h4 {
+  margin-bottom: 15px;
+}
+
+.footer-box p {
+  color: #bbb;
+}
+
+.footer-box ul li {
+  margin: 8px 0;
+}
+
+.footer-box ul li a {
+  color: #ccc;
+}
+
+.social-icons i {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons i:hover {
+  color: #0096c7;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  color: #aaa;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+}
